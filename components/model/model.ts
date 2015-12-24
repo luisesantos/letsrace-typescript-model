@@ -5,7 +5,7 @@ module LetsRace.ModelModule {
   export interface IModel {
     save(): ng.IPromise<IModel>;
     update(): ng.IPromise<IModel>;
-    list(): ng.IPromise<IModel>;
+    list(params:any): ng.IPromise<IModel>;
     get(): ng.IPromise<IModel>;
     destroy(): ng.IPromise<IModel>;
   }
