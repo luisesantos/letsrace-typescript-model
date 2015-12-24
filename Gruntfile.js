@@ -135,29 +135,7 @@ module.exports = function (grunt) {
     },
 
 
-    // Automatically inject Bower components into the app
-  /*  wiredep: {
-      app: {
-        src: ['<%= yeoman.app %>/index.html'],
-        ignorePath:  /\.\.\//
-      },
-      test: {
-        devDependencies: true,
-        src: '<%= karma.unit.configFile %>',
-        ignorePath:  /\.\.\//,
-        fileTypes:{
-          js: {
-            block: /(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi,
-              detect: {
-                js: /'(.*\.js)'/gi
-              },
-              replace: {
-                js: '\'{{filePath}}\','
-              }
-            }
-          }
-      }
-    }, */
+
     // Compiles TypeScript to JavaScript
     typescript: {
       base: {
@@ -207,14 +185,10 @@ module.exports = function (grunt) {
 
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
-      //html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      //css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       js: ['<%= yeoman.dist %>/components/{,*/}*.js'],
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>'
-        //  '<%= yeoman.dist %>/images',
-        //  '<%= yeoman.dist %>/styles'
         ],
         patterns: {
           js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
